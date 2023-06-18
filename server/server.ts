@@ -15,4 +15,6 @@ server.use(express.json())
 server.use(express.static(join(__dirname, './public')))
 server.use(cors('*' as CorsOptions))
 
+// server.use('api/v1/exercises', )
+
 export default server
