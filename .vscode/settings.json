@@ -1,4 +1,12 @@
 {
+<<<<<<< HEAD
+=======
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#3503fc",
+    "titleBar.activeForeground": "#ffffff"
+  },
+  "window.title": "~[client api]~${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}${appName}",
+>>>>>>> e166aa3a54cf1c1d083533b749e091e495c9be21
   "cSpell.words": [
     "knexfile"
   ],
