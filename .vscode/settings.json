@@ -1,13 +1,13 @@
 {
-  "workbench.colorCustomizations": {
-    "tab.activeBorder": "#3503fc",
-    "titleBar.activeBackground": "#3503fc",
-    "titleBar.activeForeground": "#ffffff",
-    "statusBar.background": "#3503fc",
-    "statusBar.foreground": "#ffffff"
-  },
-  "window.title": "~[client api]~${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}${appName}",
   "cSpell.words": [
     "knexfile"
-  ]
+  ],
+  "workbench.colorCustomizations": {
+    "tab.activeBorder": "#34ebab",
+    "titleBar.activeBackground": "#34ebab",
+    "titleBar.activeForeground": "#ffffff",
+    "statusBar.background": "#34ebab",
+    "statusBar.foreground": "#ffffff"
+  },
+  "window.title": "~[client]~${separator}${separator}${separator}${separator}${separator}${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}${appName}"
 }
