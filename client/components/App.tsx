@@ -5,8 +5,14 @@ import UserInfo from './userInfo'
 const App = () => {
   return (
     <>
+    <header>
       <Header />
+    </header>
+    <main>
       <UserInfo />
+    </main>
+    <footer>
+    </footer>
     </>
   )
 }
