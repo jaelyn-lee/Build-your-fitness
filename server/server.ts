@@ -1,20 +1,18 @@
-import { join } from 'node:path'
 import express from 'express'
-import cors, { CorsOptions } from 'cors'
+import * as Path from 'node:path'
+import exercises from './routes/exercises'
 
 const server = express()
-
-server.get('/api/v1/greeting', (req, res) => {
-  const greetings = ['hola', 'hi', 'hello', 'howdy']
-  const index = Math.floor(Math.random() * greetings.length)
-  console.log(index)
-  res.json({ greeting: greetings[index] })
-})
-
 server.use(express.json())
-server.use(express.static(join(__dirname, './public')))
-server.use(cors('*' as CorsOptions))
 
-// server.use('api/v1/exercises', )
+server.use('/api/v1/exercises', exercises)
+server.use('/api/v1/*', (req, res) => res.sendStatus(404))
+
+if (process.env.NODE_ENV === 'production') {
+  server.use('/assets', express.static(Path.resolve(__dirname, '../assets')))
+  server.get('*', (req, res) => {
+    res.sendFile(Path.resolve(__dirname, '../index.html'))
+  })
+}
 
 export default server
