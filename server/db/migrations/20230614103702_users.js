@@ -1,14 +1,17 @@
-exports.up = function(knex) {
+exports.up = function (knex) {
   return knex.schema.createTable('users', function (table) {
     table.increments('id')
-    table.string('userId')
-    table.integer('height')
-    table.integer('weight')
-    table.string('goal')
-    table.integer('level_of_fitness')
+    table.string('first_name')
+    table.string('last_name')
+    table.integer('age')
+    table.float('height')
+    table.float('weight')
+    table.float('target_weight')
+    table.string('workout_goal')
+    table.integer('fitness_level')
   })
 }
 
-exports.down = function(knex) {
+exports.down = function (knex) {
   return knex.dropTable('users')
-};
+}
