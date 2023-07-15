@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function UserForm() {
+  const navigate = useNavigate()
   const initialState = {
     firstName: '',
     lastName: '',
@@ -19,6 +21,7 @@ function UserForm() {
   function handleSubmit(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault()
     console.log('form data:', formData)
+    navigate('/user-form')
   }
 
   return (
