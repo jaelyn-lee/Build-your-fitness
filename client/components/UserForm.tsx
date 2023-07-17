@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function UserForm() {
+export default function UserForm() {
   const navigate = useNavigate()
   const initialState = {
     firstName: '',
@@ -90,5 +90,3 @@ function UserForm() {
     </>
   )
 }
-
-export default UserForm

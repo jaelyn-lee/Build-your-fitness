@@ -4,7 +4,7 @@ import {
   createRoutesFromElements,
 } from 'react-router-dom'
 import Root from './Root'
-import Home from '../views/Home'
+import Home from '../views/HomeView'
 import UserForm from '../components/UserForm'
 
 export const router = createBrowserRouter(
