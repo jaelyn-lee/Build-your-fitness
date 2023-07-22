@@ -13,7 +13,7 @@ main {
 }
 
 .bg-body-tertiary {
-  background-color: #2D2C2C !important;
+  background-color: #2d2c2c !important;
 }
 
 .logo {
@@ -32,7 +32,7 @@ main {
 }
 
 .navbar-toggler {
-  background-image:none;
+  background-image: none;
   /* width: 0; */
 }
 
@@ -41,7 +41,6 @@ main {
   font-size: 80px;
   margin-top: 150px;
   text-align: center;
-
 }
 
 .userInfo-form {
@@ -49,4 +48,44 @@ main {
   flex-direction: column;
   width: 30%;
   margin: auto;
+}
+
+.goal-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 50px;
+}
+
+.goal-div {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 5rem;
+}
+.goal-container {
+  background-color: beige;
+  width: 25vw;
+  position: relative;
+  height: 60vh;
+}
+
+.goal-container-image {
+  height: 95%;
+  position: absolute;
+  left: 85px;
+  top: 10px;
+  z-index: 1;
+}
+
+.goal-container-button {
+  position: absolute;
+  left: 70px;
+  top: 170px;
+  width: 230px;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  border: 1px solid red;
+  background-color: red;
+  color: white;
+  font-size: x-large;
+  z-index: 1;
 }

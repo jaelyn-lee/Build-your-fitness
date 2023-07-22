@@ -1,3 +1,6 @@
-export default function button() {
-  return <button className="bg-primary">Start</button>
+interface button {
+  content: string
+}
+export default function button(props: button) {
+  return <button className="bg-primary">{props.content}</button>
 }

@@ -21,7 +21,7 @@ export default function UserForm() {
   function handleSubmit(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault()
     console.log('form data:', formData)
-    navigate('/user-form')
+    navigate('/goal')
   }
 
   return (

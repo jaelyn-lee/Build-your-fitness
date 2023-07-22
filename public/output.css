@@ -512,3 +512,19 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+
+.flex {
+  display: flex;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.bg-primary {
+  background-color: AFF24B;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
