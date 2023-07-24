@@ -9,10 +9,11 @@ export default function Main() {
   }
 
   return (
-    <>
-      <h1>Welcome to our App</h1>
-      <p>Under construction</p>
-      <Button content="Start" onClick={handleRedirect} />
-    </>
+    <div className="text-center pt-44 h-screen">
+      <h1 className="text-center font-extrabold text-8xl uppercase pb-10">
+        Design your fitness
+      </h1>
+      <Button content="Get Started" onClick={handleRedirect} />
+    </div>
   )
 }

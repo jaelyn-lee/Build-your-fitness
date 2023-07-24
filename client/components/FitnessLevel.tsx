@@ -7,7 +7,6 @@ export default function FitnessLevel() {
   const [rating, setRating] = useState(0)
   const navigate = useNavigate()
 
-
   const handleRatingChange = (newRating: number) => {
     setRating(newRating)
   }
@@ -16,8 +15,10 @@ export default function FitnessLevel() {
     navigate('/')
   }
   return (
-    <div>
-      <h1>Rate your fitness level from 0 to 10:</h1>
+    <div className="grid place-content-center text-center w-full gap-6 pt-32">
+      <h1 className="text-4xl font-extrabold">
+        Rate your fitness level from 0 to 10:
+      </h1>
       <RatingScale rating={rating} onChange={handleRatingChange} />
       <Button content="Next" onClick={handleClick} />
     </div>

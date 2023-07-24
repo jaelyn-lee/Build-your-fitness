@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Button from './UI/Buttons/Button'
 
 export default function UserForm() {
   const navigate = useNavigate()
@@ -28,8 +27,8 @@ export default function UserForm() {
   return (
     <>
       <h1 className="userInfo-heading">CHOOSE YOUR PERFECT BODY</h1>
-      <form className="userInfo-form">
-        <div>
+      <form className="grid place-content-center w-full m-auto gap-4">
+        <div className="flex justify-between">
           <label>FIRST NAME: </label>
           <input
             type="text"
@@ -38,7 +37,7 @@ export default function UserForm() {
             onChange={handleChange}
           ></input>
         </div>
-        <div>
+        <div className="flex justify-between">
           <label>LAST NAME: </label>
           <input
             type="text"
@@ -47,7 +46,7 @@ export default function UserForm() {
             onChange={handleChange}
           ></input>
         </div>
-        <div>
+        <div className="flex justify-between">
           <label>AGE: </label>
           <input
             type="number"
@@ -56,7 +55,7 @@ export default function UserForm() {
             onChange={handleChange}
           ></input>
         </div>
-        <div>
+        <div className="flex justify-between">
           <label>HEIGHT: </label>
           <input
             type="float"
@@ -66,7 +65,7 @@ export default function UserForm() {
             onChange={handleChange}
           ></input>
         </div>
-        <div>
+        <div className="flex justify-between">
           <label>WEIGHT: </label>
           <input
             type="float"
@@ -76,7 +75,7 @@ export default function UserForm() {
             onChange={handleChange}
           ></input>
         </div>
-        <div>
+        <div className="flex justify-between">
           <label>TARGET WEIGHT: </label>
           <input
             type="float"
@@ -86,11 +85,12 @@ export default function UserForm() {
             onChange={handleChange}
           ></input>
         </div>
-        <Button
-          content="Submit"
+        <button
           onClick={handleSubmit}
-          style={{ width: '50px', height: '10px' }}
-        />
+          className="bg-red text-white py-2 px-14 rounded-3xl text-xl"
+        >
+          Submit
+        </button>
       </form>
     </>
   )
