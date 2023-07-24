@@ -10,7 +10,7 @@ export default function GoalContainer(props: goals) {
 
   const handleClick = () => {
     console.log(`${props.goal} clicked`)
-    navigate('/')
+    navigate('/fitness-level')
   }
   return (
     <div className="goal-container">

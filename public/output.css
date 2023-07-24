@@ -517,14 +517,10 @@ video {
   display: flex;
 }
 
-.w-10 {
-  width: 2.5rem;
-}
-
 .bg-primary {
   background-color: AFF24B;
 }
 
-.uppercase {
-  text-transform: uppercase;
+.\[key\:number\] {
+  key: number;
 }

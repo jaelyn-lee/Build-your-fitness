@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Button from './UI/Buttons/Button'
 
 export default function UserForm() {
   const navigate = useNavigate()
@@ -85,7 +86,11 @@ export default function UserForm() {
             onChange={handleChange}
           ></input>
         </div>
-        <button onClick={handleSubmit}>Submit</button>
+        <Button
+          content="Submit"
+          onClick={handleSubmit}
+          style={{ width: '50px', height: '10px' }}
+        />
       </form>
     </>
   )
