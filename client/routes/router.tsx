@@ -8,6 +8,7 @@ import Home from '../views/HomeView'
 import FitnessLevelView from '../views/FitnessLevelView'
 import GoalView from '../views/GoalView'
 import UserFormView from '../views/UserFormView'
+import WorkoutRoutineView from '../views/WorkoutRoutineView'
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,6 +17,7 @@ export const router = createBrowserRouter(
       <Route path="user-form" element={<UserFormView />} />
       <Route path="goal" element={<GoalView />} />
       <Route path="fitness-level" element={<FitnessLevelView />} />
-    </Route>,
+      <Route path="workout-routine" element={<WorkoutRoutineView />} />
+    </Route>
   ),
 )

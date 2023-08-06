@@ -1,11 +1,13 @@
 import express from 'express'
 import * as Path from 'node:path'
 import exercises from './routes/exercises'
+import users from './routes/users'
 
 const server = express()
 server.use(express.json())
 
 server.use('/api/v1/exercises', exercises)
+server.use('/api/v1/users', users)
 server.use('/api/v1/*', (req, res) => res.sendStatus(404))
 
 if (process.env.NODE_ENV === 'production') {

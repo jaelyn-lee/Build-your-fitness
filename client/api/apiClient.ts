@@ -8,4 +8,3 @@ export async function getExercises() {
   console.log(res)
   return res.body
 }
-

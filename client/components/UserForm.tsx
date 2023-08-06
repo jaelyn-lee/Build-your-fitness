@@ -27,9 +27,13 @@ export default function UserForm() {
   return (
     <>
       <h1 className="userInfo-heading">CHOOSE YOUR PERFECT BODY</h1>
-      <form className="grid place-content-center w-full m-auto gap-4">
+      <form
+        action="/user-form"
+        method="POST"
+        className="grid place-content-center w-full m-auto gap-4"
+      >
         <div className="flex justify-between">
-          <label>FIRST NAME: </label>
+          <label htmlFor="firstName">FIRST NAME: </label>
           <input
             type="text"
             name="firstName"
@@ -38,7 +42,7 @@ export default function UserForm() {
           ></input>
         </div>
         <div className="flex justify-between">
-          <label>LAST NAME: </label>
+          <label htmlFor="lastName">LAST NAME: </label>
           <input
             type="text"
             name="lastName"
@@ -47,7 +51,7 @@ export default function UserForm() {
           ></input>
         </div>
         <div className="flex justify-between">
-          <label>AGE: </label>
+          <label htmlFor="age">AGE: </label>
           <input
             type="number"
             name="age"
@@ -56,7 +60,7 @@ export default function UserForm() {
           ></input>
         </div>
         <div className="flex justify-between">
-          <label>HEIGHT: </label>
+          <label htmlFor="height">HEIGHT: </label>
           <input
             type="float"
             placeholder="cm"
@@ -66,7 +70,7 @@ export default function UserForm() {
           ></input>
         </div>
         <div className="flex justify-between">
-          <label>WEIGHT: </label>
+          <label htmlFor="weight">WEIGHT: </label>
           <input
             type="float"
             placeholder="kg"
@@ -76,7 +80,7 @@ export default function UserForm() {
           ></input>
         </div>
         <div className="flex justify-between">
-          <label>TARGET WEIGHT: </label>
+          <label htmlFor="targetWeight">TARGET WEIGHT: </label>
           <input
             type="float"
             placeholder="kg"
@@ -86,6 +90,7 @@ export default function UserForm() {
           ></input>
         </div>
         <button
+          type="submit"
           onClick={handleSubmit}
           className="bg-red text-white py-2 px-14 rounded-3xl text-xl"
         >
