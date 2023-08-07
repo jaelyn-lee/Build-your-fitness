@@ -1,5 +1,5 @@
 import connection from './connection'
-import * as users from '../../models/users'
+import {User, UserData} from '../../models/users'
 
 //GET EXERCISES FROM DB
 export function getExercises(db = connection) {
@@ -17,8 +17,8 @@ export function getUsers(db = connection) {
 }
 
 //ADD NEW USER TO DB
-export function addNewUser(user: users.User, db = connection) {
-  return db<users.User>('users').insert(user)
+export function addNewUser(user: UserData, db = connection) {
+  return db<User>('users').insert(user)
 }
 
 //DELETE USER BY ID FROM DB

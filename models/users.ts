@@ -1,10 +1,10 @@
 export interface UserData {
-  firstName: string
-  lastName: string
+  first_name: string
+  last_name: string
   age: number
   height: number
   weight: number
-  targetWeight: number
+  target_weight: number
 }
 
 export interface User extends UserData {

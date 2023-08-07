@@ -1,15 +1,16 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { addNewUser } from '../api/users'
 
 export default function UserForm() {
   const navigate = useNavigate()
   const initialState = {
-    firstName: '',
-    lastName: '',
+    first_name: '',
+    last_name: '',
     age: 0,
     height: 0,
     weight: 0,
-    targetWeight: 0,
+    target_weight: 0,
   }
 
   const [formData, setFormData] = useState(initialState)
@@ -18,9 +19,10 @@ export default function UserForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  function handleSubmit(e: React.MouseEvent<HTMLButtonElement>) {
+  async function handleSubmit(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault()
     console.log('form data:', formData)
+    await addNewUser(formData)
     navigate('/goal')
   }
 
@@ -33,21 +35,23 @@ export default function UserForm() {
         className="grid place-content-center w-full m-auto gap-4"
       >
         <div className="flex justify-between">
-          <label htmlFor="firstName">FIRST NAME: </label>
+          <label htmlFor="first_name">FIRST NAME: </label>
           <input
             type="text"
-            name="firstName"
-            value={formData.firstName}
+            name="first_name"
+            value={formData.first_name}
             onChange={handleChange}
+            className="text-slate-900"
           ></input>
         </div>
         <div className="flex justify-between">
-          <label htmlFor="lastName">LAST NAME: </label>
+          <label htmlFor="last_name">LAST NAME: </label>
           <input
             type="text"
-            name="lastName"
-            value={formData.lastName}
+            name="last_name"
+            value={formData.last_name}
             onChange={handleChange}
+            className="text-slate-900"
           ></input>
         </div>
         <div className="flex justify-between">
@@ -57,6 +61,7 @@ export default function UserForm() {
             name="age"
             value={formData.age}
             onChange={handleChange}
+            className="text-slate-900"
           ></input>
         </div>
         <div className="flex justify-between">
@@ -67,6 +72,7 @@ export default function UserForm() {
             name="height"
             value={formData.height}
             onChange={handleChange}
+            className="text-slate-900"
           ></input>
         </div>
         <div className="flex justify-between">
@@ -77,16 +83,18 @@ export default function UserForm() {
             name="weight"
             value={formData.weight}
             onChange={handleChange}
+            className="text-slate-900"
           ></input>
         </div>
         <div className="flex justify-between">
-          <label htmlFor="targetWeight">TARGET WEIGHT: </label>
+          <label htmlFor="target_weight">TARGET WEIGHT: </label>
           <input
             type="float"
             placeholder="kg"
-            name="targetWeight"
-            value={formData.targetWeight}
+            name="target_weight"
+            value={formData.target_weight}
             onChange={handleChange}
+            className="text-slate-900"
           ></input>
         </div>
         <button
