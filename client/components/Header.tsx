@@ -3,7 +3,7 @@ function Header() {
     <>
       <nav className="navbar bg-body-tertiary fixed-top">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/">
             <img
               src="client/public/images/logo-no-background.png"
               alt="logo"

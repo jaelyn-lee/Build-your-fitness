@@ -12,7 +12,7 @@ export default function FitnessLevel() {
   }
 
   const handleClick = () => {
-    navigate('/')
+    navigate('/workout-routine')
   }
   return (
     <div className="grid place-content-center text-center w-full gap-6 pt-32">
