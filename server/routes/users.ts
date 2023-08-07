@@ -20,9 +20,20 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const user = req.body
-    console.log(user)
-
     await db.addNewUser(user)
+    res.status(200)
+  } catch (error) {
+    if (error instanceof Error) {
+      res.status(500).json({ error: error.message })
+    }
+  }
+})
+
+//DELETE USER BY ID
+router.delete('/:id', async (req, res) => {
+  try {
+    const userId = Number(req.params.id)
+    await db.deleteUserById(userId)
     res.status(200)
   } catch (error) {
     if (error instanceof Error) {

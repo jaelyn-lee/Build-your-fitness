@@ -18,7 +18,10 @@ export function getUsers(db = connection) {
 
 //ADD NEW USER TO DB
 export function addNewUser(user: users.User, db = connection) {
-  return db<users.User>('users')
-    .insert(user)
-    .then((ids: any[]) => ids[0])
+  return db<users.User>('users').insert(user)
+}
+
+//DELETE USER BY ID FROM DB
+export function deleteUserById(id: number, db = connection) {
+  return db('users').delete().where('id', id)
 }
