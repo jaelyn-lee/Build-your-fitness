@@ -1,5 +1,7 @@
 //TODO: DISPLAY THE GENERATED WORKOUT ROUTINE BASED ON USER PREFERENCES.
 
+import { useLocation } from 'react-router-dom'
+
 export default function WorkoutRoutine() {
   const generatedWorkout = [
     {
@@ -138,9 +140,13 @@ export default function WorkoutRoutine() {
     },
   ]
 
+  const location = useLocation()
+  const user = location.state?.user
+  console.log({ user })
+
   return (
     <>
-      <h1>Thank you! Here is your workout routine!</h1>
+      <h1>Thank you, {user.first_name}! Here is your workout routine!</h1>
       <div className="flex justify-center items-center">
         <ul className="flex">
           {generatedWorkout.map((routine, index) => (

@@ -10,6 +10,7 @@ export default function FitnessLevel() {
   const location = useLocation()
   const user = location.state?.user
 
+
   const handleRatingChange = (newRating: number) => {
     setRating(newRating)
   }
