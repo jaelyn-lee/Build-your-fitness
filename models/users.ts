@@ -18,5 +18,5 @@ export interface WorkoutGoalData {
 
 export interface FitnessLevelData {
   user_id: number
-  fitness_level: string
+  fitness_level: number
 }

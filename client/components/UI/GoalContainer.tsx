@@ -14,15 +14,14 @@ export default function GoalContainer(props: goals) {
   const [goal, setGoal] = useState(props.workout_goal)
 
   const handleClick = async () => {
-    console.log(`${props.workout_goal} clicked`)
     setGoal(props.workout_goal)
     try {
-      const newUserGoal = await addNewUserWorkoutGoal({
+      await addNewUserWorkoutGoal({
         user_id: props.user?.id,
         workout_goal: goal,
       })
       if (props.user) {
-        navigate('/fitness-level', { state: { user: props.user } })
+        navigate('/fitness-levels', { state: { user: props.user } })
       }
     } catch (error) {
       console.error('Error adding new user', error)

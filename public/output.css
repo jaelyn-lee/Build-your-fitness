@@ -541,6 +541,22 @@ video {
   width: 100%;
 }
 
+.w-max {
+  width: max-content;
+}
+
+.w-3\/5 {
+  width: 60%;
+}
+
+.w-44 {
+  width: 11rem;
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
