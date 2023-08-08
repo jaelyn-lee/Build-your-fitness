@@ -10,7 +10,6 @@ export default function FitnessLevel() {
   const location = useLocation()
   const user = location.state?.user
 
-
   const handleRatingChange = (newRating: number) => {
     setRating(newRating)
   }
@@ -20,7 +19,8 @@ export default function FitnessLevel() {
       user_id: user.id,
       fitness_level: rating,
     })
-    navigate('/workout-routine', { state: { user: user } })
+    const userWithFitnessLevel = { ...user, fitness_level: rating }
+    navigate('/workout-routine', { state: { user: userWithFitnessLevel } })
   }
   return (
     <div className="grid place-content-center text-center w-full gap-6 pt-32">

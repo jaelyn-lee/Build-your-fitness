@@ -533,32 +533,12 @@ video {
   height: 100vh;
 }
 
-.w-1\/5 {
-  width: 20%;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.w-max {
-  width: max-content;
-}
-
-.w-3\/5 {
-  width: 60%;
-}
-
 .w-44 {
   width: 11rem;
 }
 
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.flex-col {
-  flex-direction: column;
+.w-full {
+  width: 100%;
 }
 
 .place-content-center {
@@ -706,4 +686,8 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }

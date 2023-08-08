@@ -1,10 +1,5 @@
 import request from 'superagent'
-import {
-  FitnessLevelData,
-  User,
-  UserData,
-  WorkoutGoalData,
-} from '../../models/users'
+import { FitnessLevelData, UserData, WorkoutGoalData } from '../../models/users'
 
 const url = '/api/v1'
 
