@@ -7,8 +7,6 @@ exports.up = function (knex) {
     table.float('height')
     table.float('weight')
     table.float('target_weight')
-    table.string('workout_goal')
-    table.integer('fitness_level')
   })
 }
 

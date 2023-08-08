@@ -20,8 +20,8 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const user = req.body
-    await db.addNewUser(user)
-    res.status(200).json({ message: 'New user added successfully!👍🏻' })
+    const newUser = await db.addNewUser(user)
+    res.status(200).json(newUser[0])
   } catch (error) {
     if (error instanceof Error) {
       res.status(500).json({ error: error.message })

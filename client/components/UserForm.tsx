@@ -21,9 +21,15 @@ export default function UserForm() {
 
   async function handleSubmit(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault()
-    console.log('form data:', formData)
-    await addNewUser(formData)
-    navigate('/goal')
+
+    try {
+      const newUser = await addNewUser(formData)
+      console.log({ newUser })
+
+      navigate('/workout-goals', { state: { user: newUser } })
+    } catch (error) {
+      console.error('Error adding new user', error)
+    }
   }
 
   return (

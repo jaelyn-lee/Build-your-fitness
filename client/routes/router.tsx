@@ -15,9 +15,9 @@ export const router = createBrowserRouter(
     <Route path="/" element={<Root />}>
       <Route index element={<Home />} />
       <Route path="user-form" element={<UserFormView />} />
-      <Route path="goal" element={<GoalView />} />
+      <Route path="workout-goals" element={<GoalView />} />
       <Route path="fitness-level" element={<FitnessLevelView />} />
       <Route path="workout-routine" element={<WorkoutRoutineView />} />
-    </Route>
+    </Route>,
   ),
 )

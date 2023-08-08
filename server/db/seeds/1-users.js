@@ -8,8 +8,6 @@ exports.seed = async function (knex) {
       height: '158',
       weight: '50',
       target_weight: '48',
-      workout_goal: 'gain muscle',
-      fitness_level: '6',
     },
     {
       id: 2,
@@ -19,8 +17,6 @@ exports.seed = async function (knex) {
       height: '175',
       weight: '80',
       target_weight: '75',
-      workout_goal: 'lose weight',
-      fitness_level: '4',
     },
     {
       id: 3,
@@ -30,8 +26,6 @@ exports.seed = async function (knex) {
       height: '163',
       weight: '65',
       target_weight: '60',
-      workout_goal: 'lose weight',
-      fitness_level: '5',
     },
     {
       id: 4,
@@ -41,8 +35,6 @@ exports.seed = async function (knex) {
       height: '180',
       weight: '90',
       target_weight: '85',
-      workout_goal: 'lose weight',
-      fitness_level: '3',
     },
     {
       id: 5,
@@ -52,8 +44,6 @@ exports.seed = async function (knex) {
       height: '170',
       weight: '68',
       target_weight: '65',
-      workout_goal: 'gain muscle',
-      fitness_level: '7',
     },
     {
       id: 6,
@@ -63,8 +53,6 @@ exports.seed = async function (knex) {
       height: '175',
       weight: '75',
       target_weight: '70',
-      workout_goal: 'lose weight',
-      fitness_level: '5',
     },
     {
       id: 7,
@@ -74,8 +62,6 @@ exports.seed = async function (knex) {
       height: '160',
       weight: '55',
       target_weight: '52',
-      workout_goal: 'gain muscle',
-      fitness_level: '8',
     },
     {
       id: 8,
@@ -85,8 +71,6 @@ exports.seed = async function (knex) {
       height: '185',
       weight: '85',
       target_weight: '80',
-      workout_goal: 'lose weight',
-      fitness_level: '4',
     },
     {
       id: 9,
@@ -96,8 +80,6 @@ exports.seed = async function (knex) {
       height: '167',
       weight: '62',
       target_weight: '58',
-      workout_goal: 'lose weight',
-      fitness_level: '6',
     },
     {
       id: 10,
@@ -107,8 +89,6 @@ exports.seed = async function (knex) {
       height: '172',
       weight: '70',
       target_weight: '65',
-      workout_goal: 'gain muscle',
-      fitness_level: '7',
     },
   ])
 }

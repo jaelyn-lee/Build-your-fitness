@@ -10,3 +10,13 @@ export interface UserData {
 export interface User extends UserData {
   id: number
 }
+
+export interface WorkoutGoalData {
+  user_id: number
+  workout_goal: string
+}
+
+export interface FitnessLevelData {
+  user_id: number
+  fitness_level: string
+}

@@ -1,26 +1,43 @@
 import { useNavigate } from 'react-router-dom'
+import { UserData } from '../../../models/users'
+import { useState } from 'react'
+import { addNewUserWorkoutGoal } from '../../api/users'
 
 interface goals {
   image: string
-  goal: string
+  workout_goal: string
+  user: UserData | null
 }
 
 export default function GoalContainer(props: goals) {
   const navigate = useNavigate()
+  const [goal, setGoal] = useState(props.workout_goal)
 
-  const handleClick = () => {
-    console.log(`${props.goal} clicked`)
-    navigate('/fitness-level')
+  const handleClick = async () => {
+    console.log(`${props.workout_goal} clicked`)
+    setGoal(props.workout_goal)
+    try {
+      const newUserGoal = await addNewUserWorkoutGoal({
+        user_id: props.user?.id,
+        workout_goal: goal,
+      })
+      if (props.user) {
+        navigate('/fitness-level', { state: { user: props.user } })
+      }
+    } catch (error) {
+      console.error('Error adding new user', error)
+    }
   }
+
   return (
     <div className="goal-container">
       <img
         src={props.image}
-        alt={props.goal}
+        alt={props.workout_goal}
         className="goal-container-image"
       />
       <button className="goal-container-button" onClick={handleClick}>
-        {props.goal}
+        {props.workout_goal}
       </button>
     </div>
   )
