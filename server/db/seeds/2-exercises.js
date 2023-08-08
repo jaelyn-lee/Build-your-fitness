@@ -1,5 +1,4 @@
 exports.seed = async function(knex) {
-  await knex('exercises').del()
   await knex('exercises').insert([
     {
       id: 1,
