@@ -1,17 +1,20 @@
 {
-  "name": "Build-your-fitness",
+  "name": "Design-your-fitness",
   "version": "2.0.0",
-  "main": "server/index.ts",
+  "description": "Workout routine generating app",
+  "repository": "https://github.com/jaelyn-lee/Build-your-fitness",
   "license": "MIT",
+  "type": "module",
+  "main": "server/index.ts",
   "keywords": [
     "fullstack"
   ],
   "scripts": {
-    "start": "node dist/server/index.ts",
+    "start": "node dist/server/index.js",
     "test": "vitest",
     "dev": "run-p dev:client dev:server dev:css",
     "dev:client": "vite",
-    "dev:server": "nodemon --watch server/",
+    "dev:server": "nodemon --watch server",
     "dev:css": "tailwindcss -i ./client/styles/input.css -o ./public/output.css --watch",
     "build": "run-s build:client build:server",
     "build:client": "vite build",

@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { addNewUser } from '../api/users'
+import { UserData } from '../../models/users'
 
 export default function UserForm() {
   const navigate = useNavigate()
-  const initialState = {
+  const initialState : UserData = {
     first_name: '',
     last_name: '',
     age: 0,
@@ -14,9 +15,27 @@ export default function UserForm() {
   }
 
   const [formData, setFormData] = useState(initialState)
+  const [isFormValid, setIsFormValid] = useState(false)
+
+  function validForm(formData: UserData) {
+    if (
+      formData.first_name.length > 0 &&
+      formData.last_name.length > 0 &&
+      formData.age > 0 &&
+      formData.height > 0 &&
+      formData.weight > 0 &&
+      formData.target_weight > 0
+    ) {
+      return true
+    } else {
+      return false
+    }
+  }
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
+    const updatedFormData = { ...formData, [e.target.name]: e.target.value }
+    setFormData(updatedFormData)
+    setIsFormValid(validForm(updatedFormData))
   }
 
   async function handleSubmit(e: React.MouseEvent<HTMLButtonElement>) {
@@ -48,6 +67,7 @@ export default function UserForm() {
             value={formData.first_name}
             onChange={handleChange}
             className="text-slate-900"
+            required
           ></input>
         </div>
         <div className="flex justify-between">
@@ -106,7 +126,10 @@ export default function UserForm() {
         <button
           type="submit"
           onClick={handleSubmit}
-          className="bg-red text-white py-2 px-14 rounded-3xl text-xl"
+          className={`bg-red text-white py-2 px-14 rounded-3xl text-xl ${
+            isFormValid ? '' : ' opacity-50 cursor-not-allowed'
+          }`}
+          disabled={!isFormValid}
         >
           Submit
         </button>
