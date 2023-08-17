@@ -10,17 +10,17 @@ export default function Goal() {
       <div className="goal-div">
         <GoalContainer
           workout_goal="Weight Loss"
-          image="client/public/images/weightloss.png"
+          image="/images/weightloss.png"
           user={user}
         />
         <GoalContainer
           workout_goal="Gain Muscle"
-          image="client/public/images/gainmuscle.png"
+          image="/images/gainmuscle.png"
           user={user}
         />
         <GoalContainer
           workout_goal="Body Building"
-          image="client/public/images/bodybuild.png"
+          image="/images/bodybuild.png"
           user={user}
         />
       </div>

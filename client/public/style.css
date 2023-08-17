@@ -1,5 +1,5 @@
 body {
-  background-image: url('./images/background.png');
+  background-image: url('/images/background.png');
   background-repeat: none;
   background-size: cover;
   color: white;
@@ -43,7 +43,6 @@ main {
   text-align: center;
 }
 
-
 .goal-title {
   text-transform: uppercase;
   text-align: center;
@@ -57,7 +56,7 @@ main {
 }
 .goal-container {
   background-color: beige;
-  width: 25vw;
+  width: 23vw;
   position: relative;
   height: 60vh;
 }
@@ -65,15 +64,15 @@ main {
 .goal-container-image {
   height: 95%;
   position: absolute;
-  left: 85px;
+  left: 100px;
   top: 10px;
   z-index: 1;
 }
 
 .goal-container-button {
   position: absolute;
-  left: 70px;
-  top: 170px;
+  left: 100px;
+  top: 200px;
   width: 230px;
   padding: 1rem 2rem;
   border-radius: 30px;
