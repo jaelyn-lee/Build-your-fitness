@@ -20,20 +20,10 @@ main {
   width: 130px;
 }
 
-.navbar-toggler {
-  color: white;
-  border: solid 2px transparent;
-}
-
 .fa-solid .fa-bars {
   color: white;
   width: 500px;
   /* position: relative; */
-}
-
-.navbar-toggler {
-  background-image: none;
-  /* width: 0; */
 }
 
 .userInfo-heading {

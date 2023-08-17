@@ -30,7 +30,7 @@ export default function Header() {
         </button>
       )}
       <nav
-        className={`fixed z-50 left-0 top-20 h-full w-full backdrop-filter backdrop-blur-md text-white bg-primary bg-opacity-90 shadow-transparent transition-all ease-in-out duration-200 ${
+        className={`fixed z-50 left-0 top-32 h-full w-full backdrop-filter backdrop-blur-md text-white bg-primary bg-opacity-90 shadow-transparent transition-all ease-in-out duration-200 ${
           navOpen ? 'opacity-100' : 'hidden'
         }`}
       >
