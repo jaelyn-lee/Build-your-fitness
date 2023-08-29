@@ -3,7 +3,9 @@ import GoalContainer from './UI/GoalContainer'
 
 export default function Goal() {
   const location = useLocation()
-  const user = location.state?.user
+
+  const storedUserData = localStorage.getItem('userData')
+  const user = storedUserData ? JSON.parse(storedUserData) : null
   return (
     <div>
       <h1 className="goal-title">Choose your goal</h1>

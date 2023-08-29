@@ -27,8 +27,10 @@
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.2.0",
+    "chart.js": "^4.3.3",
     "express": "^4.17.2",
     "knex": "^2.3.0",
+    "react-chartjs-2": "^5.2.0",
     "sqlite3": "^5.1.2",
     "superagent": "7.1.1",
     "tailwind": "^4.0.0"

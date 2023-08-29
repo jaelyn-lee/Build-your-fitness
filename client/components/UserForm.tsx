@@ -5,7 +5,7 @@ import { UserData } from '../../models/users'
 
 export default function UserForm() {
   const navigate = useNavigate()
-  const initialState : UserData = {
+  const initialState: UserData = {
     first_name: '',
     last_name: '',
     age: 0,
@@ -43,7 +43,7 @@ export default function UserForm() {
 
     try {
       const newUser = await addNewUser(formData)
-      console.log({ newUser })
+      localStorage.setItem('userData', JSON.stringify(newUser))
 
       navigate('/workout-goals', { state: { user: newUser } })
     } catch (error) {

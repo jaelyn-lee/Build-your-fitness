@@ -8,7 +8,9 @@ export default function FitnessLevel() {
   const [rating, setRating] = useState(0)
   const navigate = useNavigate()
   const location = useLocation()
-  const user = location.state?.user
+
+  const storedUserData = localStorage.getItem('userData')
+  const user = storedUserData ? JSON.parse(storedUserData) : location.state.user
 
   const handleRatingChange = (newRating: number) => {
     setRating(newRating)
