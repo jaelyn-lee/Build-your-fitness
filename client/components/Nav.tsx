@@ -21,7 +21,7 @@ export default function Nav(props: Props) {
           </li>
           <li className="hover:text-black hover:font-black">
             <button onClick={() => goTo('/weight-tracker')}>
-              Weight Tracker
+              Weight Tracker 
             </button>
           </li>
         </ul>
